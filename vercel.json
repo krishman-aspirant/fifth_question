@@ -1,14 +1,14 @@
 
 {
   "functions": {
-    "api/index.py": {
+    "api/main/index.py": {
       "includeFiles": "api/q-vercel-latency.json"
     }
   },
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "api/index.py"
+      "dest": "api/main/index.py"
     }
   ]
 }
