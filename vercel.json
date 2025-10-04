@@ -1,10 +1,13 @@
 {
-  "builds": [{
-    "src": "api/index.py",
-    "use": "@vercel/python"
-  }],
-  "routes": [{
-    "src": "/(.*)",
-    "dest": "api/index.py"
-  }]
+  "functions": {
+    "api/index.py": {
+      "includeFiles": "api/q-vercel-latency.json"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/index.py"
+    }
+  ]
 }
